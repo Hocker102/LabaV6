@@ -61,6 +61,10 @@ def update_size(event):
     else:
         Metal_cbox.grid()
 
+#Привязка события к функции update_size
+Type_cbox.bind("<<ComboboxSelected>>",update_size)
+def calculate_cost():
+    selected_size = Datas.Size_var.get()
 
 #Кнопка для расчета
 Result_btn = ttk.Button(root, text = "Рассчитать")
