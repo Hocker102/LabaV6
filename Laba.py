@@ -4,7 +4,6 @@ from tkinter import messagebox
 import Datas
 import Calculation
 
-
 #Создание окна
 root = tk.Tk()
 root.title("Кальулятор мебели")
@@ -54,7 +53,7 @@ def update_size(event):
     available_sizes = Datas.Sizes().get(selected_type,[])
     Size_cbox["values"] = available_sizes
     Datas.Size_var.set("")
-       
+   
     #Выбрана ли кровать?
     if selected_type == "Кровать":
         Metal_cbox.grid_remove()
@@ -77,7 +76,7 @@ def show_result():
         result_label["text"] = f"Себестоимость: {Calculation.calculation()} рублей"
 
 #Кнопка для расчета
-Result_btn = ttk.Button(root, text = "Рассчитать")
+Result_btn = ttk.Button(root, text = "Рассчитать",command = show_result)
 Result_btn.grid(row=5, columnspan=2)
 
 #результат
