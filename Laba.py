@@ -54,6 +54,13 @@ def update_size(event):
     available_sizes = Datas.Sizes().get(selected_type,[])
     Size_cbox["values"] = available_sizes
     Datas.Size_var.set("")
+       
+    #Выбрана ли кровать?
+    if selected_type == "Кровать":
+        Metal_cbox.grid_remove()
+    else:
+        Metal_cbox.grid()
+
 
 #Кнопка для расчета
 Result_btn = ttk.Button(root, text = "Рассчитать")
