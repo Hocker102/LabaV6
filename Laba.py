@@ -49,6 +49,12 @@ Size_lbl.grid(row=4,column=0)
 Size_cbox = ttk.Combobox(root,state= "readonly",textvariable=Datas.Size_var)
 Size_cbox.grid(row=4,column=1)
 
+def update_size(event):
+    selected_type = Datas.Type_var.get()
+    available_sizes = Datas.Sizes().get(selected_type,[])
+    Size_cbox["values"] = available_sizes
+    Datas.Size_var.set("")
+
 #Кнопка для расчета
 Result_btn = ttk.Button(root, text = "Рассчитать")
 Result_btn.grid(row=5, columnspan=2)
