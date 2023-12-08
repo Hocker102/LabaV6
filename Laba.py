@@ -8,6 +8,11 @@ import Datas
 root = tk.Tk()
 root.title("Кальулятор мебели")
 
+#Вызов функций хранения параметров
+Datas.Variables()
+Datas.Sizes()
+Datas.PriceList()
+
 #Кнопка для расчета
 Result_btn = ttk.Button(root, text = "Рассчитать")
 Result_btn.grid(row=5, columnspan=2)
