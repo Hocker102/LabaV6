@@ -13,6 +13,38 @@ Datas.Variables()
 Datas.Sizes()
 Datas.PriceList()
 
+#Создание списков
+
+    #Тип мебели
+Type_lbl = ttk.Label(root, text = "Тип мебели:")
+Type_lbl.grid (row = 0, column = 0)
+Type_cbox = ttk.Combobox(root, state = "readonly", textvariable=Datas.Type_var, values = ["Кресло","Диван","Кровать"])
+Type_cbox.grid(row=0,column=1)
+    #Ткань
+Fabric_lbl = ttk.Label(root, text = "Ткань:")
+Fabric_lbl.grid (row = 1, column=0)
+Fabric_cbox = ttk.Combobox(root, state= "readonly", textvariable=Datas.Fabric_var,values = ["Жаккард", "Шенил","Кожа"])
+Fabric_cbox.grid(row = 1,column=1)
+
+    #Дерево
+Wood_lbl = ttk.Label(root,text = "Дерево:")
+Wood_lbl.grid(row=2,column=0)
+Wood_cbox = ttk.Combobox(root,state="readonly",textvariable=Datas.Wood_var,values=["Массив","ЛДСП","ДСП","Фанера"])
+Wood_cbox.grid(row = 2, column=1)
+  
+    #Металл
+Metal_lbl = ttk.Label(root,text="Металл:")
+Metal_lbl.grid(row=3,column=0)
+Metal_cbox = ttk.Combobox(root,state= "readonly",textvariable=Datas.Metal_var, values = ["Титан","Оцинкованная сталь"])
+Metal_cbox.grid(row=3,column=1)
+
+
+    #Размер
+Size_lbl = ttk.Label(root,text="Размер:")
+Size_lbl.grid(row=4,column=0)
+Size_cbox = ttk.Combobox(root,state= "readonly",textvariable=Datas.Size_var)
+Size_cbox.grid(row=4,column=1)
+
 #Кнопка для расчета
 Result_btn = ttk.Button(root, text = "Рассчитать")
 Result_btn.grid(row=5, columnspan=2)
