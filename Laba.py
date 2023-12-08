@@ -1,6 +1,8 @@
 ﻿import tkinter as tk
 from tkinter import Label, ttk
 from tkinter import messagebox
+import Datas
+
 
 #Создание окна
 root = tk.Tk()
