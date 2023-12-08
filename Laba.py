@@ -2,6 +2,7 @@
 from tkinter import Label, ttk
 from tkinter import messagebox
 import Datas
+import Calculation
 
 
 #Создание окна
