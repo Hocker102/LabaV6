@@ -66,6 +66,16 @@ Type_cbox.bind("<<ComboboxSelected>>",update_size)
 def calculate_cost():
     selected_size = Datas.Size_var.get()
 
+#Узнать результат
+def show_result():
+    if (Datas.Type_var.get() == "" or
+        Datas.Fabric_var.get() == "" or
+        Datas.Wood_var.get() == "" or
+        Datas.Size_var.get() == ""):
+        messagebox.showerror("Ошибка", "Пожалуйста, выберите все параметры перед расчетом.")
+    else:    
+        result_label["text"] = f"Себестоимость: {Calculation.calculation()} рублей"
+
 #Кнопка для расчета
 Result_btn = ttk.Button(root, text = "Рассчитать")
 Result_btn.grid(row=5, columnspan=2)
