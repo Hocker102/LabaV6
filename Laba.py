@@ -14,6 +14,9 @@ Datas.Variables()
 Datas.Sizes()
 Datas.PriceList()
 
+#Вызов функции определения суммы
+Calculation.calculation()
+
 #Создание списков
 
     #Тип мебели
